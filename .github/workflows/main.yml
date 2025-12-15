@@ -1,0 +1,25 @@
+name: Run on Git Push
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  echo-job:
+    runs-on: self-hosted
+
+    steps:
+      - name: Say hello
+        run: echo "🚀 Git push detected!"
+
+      - name: Show branch name
+        run: echo "Branch - ${{ github.ref }}"
+
+      - name: Show repository
+        run: echo "Repository - ${{ github.repository }}"
+
+      - name: Show actor
+        run: echo "Pushed by- ${{ github.actor }}"
+
+      - name: Done
+        run: echo "✅ GitHub Actions workflow completed"
