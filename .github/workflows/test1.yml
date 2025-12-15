@@ -3,7 +3,8 @@ name: Run on Git Push
 on:
   push:
     branches:
-      - main
+      - master
+      - b3
 jobs:
   echo-job:
     runs-on: self-hosted
