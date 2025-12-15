@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   echo-job:
-    runs-on: cmd-runner1
+    runs-on: self-hosted
 
     steps:
       - name: Say hello
